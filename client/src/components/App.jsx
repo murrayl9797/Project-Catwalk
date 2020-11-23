@@ -9,6 +9,7 @@ import Row from 'react-bootstrap/Row';
 import axios from 'axios';
 import NavBar from '../components/common/Navbar.jsx';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     let productID = Number(this.props.match.params.id);
     axios
-      .get(`http://18.224.37.110/products/${productID}`)
+      .get(`http://3.21.164.220/products/${productID}`)
       .then((row) => {
         this.props.handleChangeProductClick(row.data);
         this.props.handleChangeURLClick(this.props.match.url);

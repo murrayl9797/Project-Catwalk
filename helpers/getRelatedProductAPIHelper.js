@@ -3,7 +3,7 @@ import axios from 'axios';
 const getRelatedProducts = async (productID) => {
   try {
     const response = await axios(
-      `http://18.224.37.110/products/${productID.id}/related`
+      `http://3.21.164.220/products/${productID.id}/related`
     );
     return response.data;
   } catch (error) {

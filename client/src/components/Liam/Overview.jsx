@@ -101,16 +101,17 @@ const Overview = function ({ currentProduct }) {
     console.log('Product changed!');
     axios({
       method: 'get',
-      url: `http://18.224.37.110/products/${currentProduct.id}/styles`
+      url: `http://3.21.164.220/products/${currentProduct.id}/styles`
     })
       .then(({ data }) => {
-        //console.log('Styles: ', data.results);
+        console.log('Styles: ', data);
+        console.log('Styles: ', currentProduct.id);
         updateStyleList(data.results);
         const currInd = findDefaultStyle(data.results);
         // Wait to update style until StyleList updated
-        useEffect(() => {
-          handleChangeStyle(currInd, styleList);
-        }, [styleList]);
+        // useEffect(() => {
+        //   handleChangeStyle(currInd, styleList);
+        // }, [styleList]);
       })
       .catch(err => {
         console.log('Error in retrieving styles: ', err);

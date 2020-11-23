@@ -34,7 +34,7 @@ const RelatedProductCard = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://18.224.37.110/products/${props.currentProduct.id}/related`)
+      .get(`http://3.21.164.220/products/${props.currentProduct.id}/related`)
       .then(({ data }) => {
         return { data };
       })
@@ -79,7 +79,7 @@ const RelatedProductCard = (props) => {
   const getRelatedProductsImage = function (relatedProducts) {
     const arrayOfPromiseImage = relatedProducts.map((id) => {
       return axios
-        .get(`http://18.224.37.110/products/${id}/styles`)
+        .get(`http://3.21.164.220/products/${id}/styles`)
         .then()
         .catch();
     });
@@ -88,7 +88,7 @@ const RelatedProductCard = (props) => {
 
   const getRelatedProducts = function (arrayOfID) {
     const arrayOfPromise = arrayOfID.data.map((id) => {
-      return axios.get(`http://18.224.37.110/products/${id}`).then().catch();
+      return axios.get(`http://3.21.164.220/products/${id}`).then().catch();
     });
     return Promise.all(arrayOfPromise);
   };
