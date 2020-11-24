@@ -5,7 +5,7 @@ Welcome to our e-commerce website! This website utilizes a plethora of front-end
 ## Product Details
 *by Liam Murray*
 
-![Image of product details](./fecscreenshots/FECoverview1.png)
+![Image of product details](./fecscreenshots/FECoverview3.png)
 
 This is the Product Details portion of the page, and it gives some general information on the product you're currently viewing, including styles, sizing, quantity, and other miscellaneous features. This also includes an image gallery so you can cycle through the various images for a given product, as well as the various images for each style selected (the styles are located on the right hand side in the small circles). These subcomponents utilize a number of React Hooks that are intertwined and will appropriately handle a user's experience as they navigate through this portion of the page.
 
